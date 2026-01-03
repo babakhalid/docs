@@ -1,0 +1,643 @@
+# GitHub Integration
+
+Connect your Yomake projects to GitHub for version control, code backup, and automated deployment workflows. This guide covers everything you need to know about the GitHub integration.
+
+---
+
+## Why Connect GitHub?
+
+### Version Control
+- **Track every change** - Complete history of your project
+- **Revert mistakes** - Go back to any previous version
+- **Branch and experiment** - Try ideas without breaking production
+- **Commit messages** - Document what changed and why
+
+### Code Backup
+- **Never lose work** - Projects backed up to GitHub
+- **Disaster recovery** - Restore from any point in time
+- **Multiple locations** - Code stored both on Yomake and GitHub
+- **Export anytime** - Download full codebase
+
+### Collaboration
+- **Work with developers** - Invite team members to repository
+- **Code reviews** - Pull request workflows
+- **Issues and discussions** - Track bugs and features
+- **Professional workflows** - Industry-standard Git practices
+
+### Automated Deployment
+- **Push to deploy** - Changes trigger Vercel builds
+- **Preview branches** - Test features before merging
+- **CI/CD pipelines** - Automated testing and deployment
+- **Production-ready** - Professional deployment workflows
+
+---
+
+## Requirements
+
+**To connect GitHub:**
+- ✅ GitHub account (free or paid)
+- ✅ Yomake Creator plan or higher
+- ✅ Email verified on both accounts
+
+**GitHub account limits:**
+- Free: Unlimited public repositories
+- Paid: Unlimited private repositories
+
+---
+
+## Connecting GitHub
+
+### First-Time Setup
+
+**Step 1: Navigate to Integrations**
+1. Click your profile picture (top-right)
+2. Select "Settings"
+3. Click "Integrations" tab
+4. Find "GitHub" section
+
+**Step 2: Authorize Yomake**
+1. Click "Connect GitHub" button
+2. You'll be redirected to GitHub.com
+3. Review requested permissions
+4. Click "Authorize Yomake"
+
+**Step 3: Configure Access**
+1. Choose repositories to grant access:
+   - **All repositories** - Yomake can access all (current and future)
+   - **Selected repositories** - Choose specific repos
+2. Click "Install & Authorize"
+3. Redirected back to Yomake
+
+**Step 4: Confirmation**
+- Green checkmark appears on GitHub integration
+- Status shows "Connected"
+- You're ready to sync projects!
+
+**Total time:** 2-3 minutes
+
+---
+
+## Permissions Explained
+
+### What Yomake Can Do
+
+**Read access:**
+- ✅ View repository contents
+- ✅ Read commit history
+- ✅ Access branches
+- ✅ Read repository settings
+
+**Write access:**
+- ✅ Create commits
+- ✅ Push code changes
+- ✅ Create and update branches
+- ✅ Create pull requests
+
+### What Yomake Cannot Do
+
+**Restricted actions:**
+- ❌ Delete repositories
+- ❌ Change repository settings
+- ❌ Access private data from other apps
+- ❌ Manage billing or organization settings
+- ❌ Delete branches (without permission)
+- ❌ Force push to protected branches
+
+**Your control:**
+- Revoke access anytime
+- Modify repository permissions
+- Protect important branches
+- Set up branch protection rules
+
+---
+
+## Linking Projects to GitHub
+
+### New Project with GitHub
+
+**During project creation:**
+1. Click "New Project"
+2. Fill in project details
+3. Toggle "Connect GitHub Repository"
+4. Choose:
+   - **Create new repository** - Yomake creates it for you
+   - **Use existing repository** - Select from your repos
+5. Configure repository settings:
+   - Repository name
+   - Public or private
+   - Initialize with README (optional)
+6. Click "Create Project"
+
+Your project will automatically sync to GitHub.
+
+---
+
+### Add GitHub to Existing Project
+
+**Sync an already-created project:**
+
+1. Open your project
+2. Click the three-dot menu (⋮)
+3. Select "Project Settings"
+4. Go to "Integrations" tab
+5. Find "GitHub Repository" section
+6. Click "Connect Repository"
+7. Choose:
+   - **Create new repo** - Auto-creates on GitHub
+   - **Link existing repo** - Select from dropdown
+8. Click "Save"
+
+**What happens:**
+- Initial commit created with all current code
+- Project synced to GitHub
+- Future changes can be pushed manually or automatically
+
+---
+
+## Working with GitHub
+
+### Manual Sync
+
+**Push changes to GitHub:**
+
+**From project workspace:**
+1. Click the GitHub icon in header
+2. Review pending changes
+3. Write commit message
+4. Click "Push to GitHub"
+
+**From dashboard:**
+1. Find project card
+2. Click three-dot menu (⋮)
+3. Select "Sync to GitHub"
+4. Confirm push
+
+**What gets synced:**
+- All code files
+- Configuration files
+- Package.json dependencies
+- Assets and images
+
+**What doesn't sync:**
+- Chat history
+- Preview state
+- Tokens usage
+- Personal settings
+
+---
+
+### Automatic Sync
+
+**Enable auto-sync (coming soon):**
+- Every AI change automatically committed
+- Pushed to GitHub in real-time
+- Continuous backup
+- Complete history
+
+**Current workflow:**
+- Changes saved in Yomake
+- Manual push when ready
+- Batch related changes into commits
+
+---
+
+### Commit Messages
+
+**Yomake generates smart commit messages:**
+
+**Example commits:**
+```
+feat: Add hero section with CTA button
+
+Generated by Yomake AI
+```
+
+```
+style: Update color scheme to blue theme
+
+Generated by Yomake AI
+```
+
+```
+fix: Resolve mobile navigation bug
+
+Generated by Yomake AI
+```
+
+**Follows Conventional Commits:**
+- `feat:` New features
+- `fix:` Bug fixes
+- `style:` Styling changes
+- `refactor:` Code restructuring
+- `docs:` Documentation updates
+
+**Custom messages:**
+- Edit before pushing
+- Add details about changes
+- Reference issues or PRs
+
+---
+
+### Viewing on GitHub
+
+**Access your code:**
+
+1. Go to github.com
+2. Navigate to your repository
+3. Browse code files
+4. View commit history
+5. Check branches
+
+**Repository structure:**
+```
+your-project/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── lib/
+│   └── App.tsx
+├── public/
+├── package.json
+├── tsconfig.json
+├── tailwind.config.ts
+└── vite.config.ts
+```
+
+---
+
+## Branches and Workflows
+
+### Main Branch
+
+**Default branch:**
+- `main` (or `master` on older repos)
+- Contains production-ready code
+- Protected (optional)
+- Deployed version
+
+**Yomake pushes to:**
+- Main branch by default
+- Or your specified default branch
+
+---
+
+### Feature Branches (Advanced)
+
+**Coming soon:**
+- Create branches from Yomake
+- Work on features separately
+- Merge via pull requests
+- Branch-based deployment
+
+**Current workaround:**
+- Create branches manually on GitHub
+- Clone locally to work
+- Push back to GitHub
+- Import changes to Yomake
+
+---
+
+### Pull Requests
+
+**Professional workflow:**
+
+1. Make changes in Yomake
+2. Push to GitHub
+3. Create pull request on GitHub
+4. Request code review
+5. Merge after approval
+
+**Use cases:**
+- Team collaboration
+- Code review process
+- Quality control
+- Compliance requirements
+
+---
+
+## GitHub + Vercel Workflow
+
+### Automated Deployment
+
+**Powerful combination:**
+
+**Setup:**
+1. Connect GitHub integration
+2. Connect Vercel integration
+3. Link project to both
+4. Configure Vercel to watch GitHub repo
+
+**Workflow:**
+1. Make changes in Yomake
+2. Push to GitHub (manual or auto)
+3. GitHub triggers Vercel webhook
+4. Vercel builds and deploys automatically
+5. New version live in 30-60 seconds
+
+**Benefits:**
+- No manual deployment
+- Instant preview URLs
+- Production deployments
+- Branch previews
+- Rollback capability
+
+[Learn more: Vercel Integration](/docs/integrations/vercel-integration)
+
+---
+
+## Collaboration Workflows
+
+### Solo Developer
+
+**Your personal backup:**
+```
+Yomake (build) → GitHub (backup) → Vercel (deploy)
+```
+
+- Build in Yomake
+- Sync to GitHub for backup
+- Auto-deploy to Vercel
+- Full history and version control
+
+---
+
+### Small Team
+
+**Designer + Developer:**
+```
+Designer (Yomake) → GitHub → Developer (local)
+                              ↓
+                          GitHub → Vercel
+```
+
+- Designer builds in Yomake
+- Pushes to GitHub
+- Developer pulls and adds features
+- Pushes back to GitHub
+- Vercel deploys changes
+
+---
+
+### Agency Workflow
+
+**Multiple projects and clients:**
+```
+Project Manager (Yomake) → GitHub → Team Review → Deploy
+```
+
+- PM creates initial structure
+- Syncs to GitHub for client
+- Team reviews code
+- Client approves
+- Deploy to production
+
+---
+
+## Troubleshooting
+
+### Connection Failed
+
+**"Unable to connect to GitHub"**
+
+**Check:**
+1. GitHub.com is accessible
+2. You're logged into GitHub
+3. Browser allows popups
+4. Correct GitHub account
+
+**Fix:**
+1. Disconnect integration
+2. Clear browser cache
+3. Reconnect GitHub
+4. Re-authorize Yomake
+
+---
+
+### Push Failed
+
+**"Error pushing to GitHub"**
+
+**Common causes:**
+
+**1. Repository doesn't exist:**
+- Check repository name
+- Verify it's created on GitHub
+- Re-link repository
+
+**2. Permission denied:**
+- Check Yomake has write access
+- Review GitHub app permissions
+- Re-authorize if needed
+
+**3. Branch protected:**
+- GitHub branch protection enabled
+- Disable protection or use PR workflow
+- Or push to different branch
+
+**4. Merge conflict:**
+- Changes made directly on GitHub
+- Pull latest changes first
+- Resolve conflicts manually
+
+---
+
+### Repository Not Listed
+
+**Can't find repo in dropdown:**
+
+**Causes:**
+- Repository access not granted
+- Yomake only has access to selected repos
+- New repository created after connection
+
+**Fix:**
+1. Go to [GitHub Settings](https://github.com/settings/installations)
+2. Find "Yomake" app
+3. Click "Configure"
+4. Update repository access
+5. Grant access to missing repo
+6. Return to Yomake and refresh
+
+---
+
+### Sync Out of Date
+
+**"Your GitHub repo has changes not in Yomake"**
+
+**Scenarios:**
+- Committed directly on GitHub
+- Team member pushed changes
+- Merged PR from outside Yomake
+
+**Resolution:**
+1. Download latest from GitHub
+2. Manually merge with Yomake project
+3. Or start fresh from GitHub
+
+**Future feature:** Two-way sync coming soon
+
+---
+
+## Best Practices
+
+### Commit Frequently
+- Push to GitHub after major changes
+- Don't wait days between syncs
+- Each feature gets its own commit
+- Easier to track and revert
+
+### Write Clear Commit Messages
+- Edit auto-generated messages
+- Add context about why, not just what
+- Reference related issues
+- Follow team conventions
+
+### Use Branch Protection
+**Protect your main branch:**
+1. Go to GitHub repository settings
+2. Branches → Add rule
+3. Enable:
+   - Require pull requests
+   - Require reviews
+   - Status checks
+
+### Keep Repositories Private
+- Unless intentionally open source
+- Protects your code
+- Prevents unauthorized access
+- GitHub free includes private repos
+
+### Regular Backups
+- Even with GitHub, export code locally
+- Multiple backup locations
+- Protection against account issues
+
+---
+
+## Security
+
+### Access Tokens
+
+**How Yomake accesses GitHub:**
+- OAuth token stored encrypted
+- Token has limited scope
+- Refreshed automatically
+- Revocable anytime
+
+**Token permissions:**
+- Read/write repository contents
+- Create commits
+- Manage webhooks (for deployments)
+
+### Revoke Access
+
+**To remove Yomake's access:**
+
+1. Go to [GitHub Settings](https://github.com/settings/installations)
+2. Find "Yomake" in Applications
+3. Click "Configure"
+4. Click "Uninstall" or modify permissions
+5. Confirm removal
+
+**Effect:**
+- Yomake can no longer access your repos
+- Existing code on GitHub remains
+- Must reconnect to sync again
+
+### Repository Security
+
+**Keep your code safe:**
+- Enable 2FA on GitHub account
+- Use strong passwords
+- Review access logs regularly
+- Limit team member permissions
+- Enable security alerts
+
+---
+
+## Advanced Features
+
+### Webhooks
+
+**GitHub notifies Yomake when:**
+- New commits pushed
+- Pull requests created
+- Issues opened
+- Branches created
+
+**Use cases:**
+- Trigger builds
+- Update project status
+- Sync changes back to Yomake (coming soon)
+
+### GitHub Actions (Coming Soon)
+
+**Automate workflows:**
+- Run tests on push
+- Build and deploy
+- Code quality checks
+- Custom automation
+
+### Enterprise Features
+
+**For organizations:**
+- SSO/SAML authentication
+- Audit logs
+- Advanced permissions
+- On-premise GitHub Enterprise support
+
+[Contact Enterprise Sales](mailto:sales@yomake.ai)
+
+---
+
+## Pricing
+
+### GitHub Costs
+
+**GitHub pricing:**
+- Personal: Free for public repos
+- Pro: $4/month for unlimited private repos
+- Team: $4/user/month for organizations
+
+**Yomake costs:**
+- GitHub integration: Included in Creator plan and above
+- No additional fees for GitHub sync
+
+---
+
+## FAQs
+
+**Q: Do I need a paid GitHub account?**
+A: No, GitHub free accounts work perfectly. Paid plans offer more private repos.
+
+**Q: Can I use GitHub Desktop with Yomake projects?**
+A: Yes! Clone your repo and use any Git client.
+
+**Q: What if I already have code on GitHub?**
+A: You can link an existing repo and Yomake will sync to it.
+
+**Q: Can multiple projects use the same GitHub repo?**
+A: Not recommended. Each project should have its own repo.
+
+**Q: Will pushing to GitHub cost tokens?**
+A: No, syncing to GitHub doesn't consume tokens.
+
+**Q: Can I disable GitHub sync temporarily?**
+A: Yes, just disconnect the integration. Reconnect anytime.
+
+**Q: What happens if I delete the GitHub repo?**
+A: Your Yomake project continues working. Syncing will fail until you link a new repo.
+
+---
+
+## Next Steps
+
+Now that you've connected GitHub:
+
+- [Vercel Integration](/docs/integrations/vercel-integration) - Automated deployments
+- [Collaboration](/docs/collaboration/inviting-collaborators) - Work with your team
+- [Project Settings](/docs/projects/project-settings) - Configure your project
+
+---
+
+**Back up your work!** Connect GitHub and never lose your code.

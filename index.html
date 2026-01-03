@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yomake Documentation - AI Coder Agent for Makers</title>
+    <meta name="description" content="Yomake.ai documentation. Learn how to build applications faster with AI-powered code generation, smart debugging, and rapid prototyping." />
+    <meta name="keywords" content="AI coder, AI coding assistant, code generation, rapid prototyping, maker tools, AI developer, automated coding, documentation, Yomake.ai" />
+    <meta name="author" content="Yomake.ai" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="en" />
+    <link rel="canonical" href="https://docs.yomake.ai" />
+    <link rel="icon" type="image/png" href="/logo_yomake_1764899447144.png" />
+
+    <!-- Google Fonts - Distinctive Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Yomake Documentation" />
+    <meta property="og:description" content="Build applications lightning fast with Yomake.ai. Complete documentation for AI-powered code generation." />
+    <meta property="og:image" content="https://yomake.ai/og-image.png" />
+    <meta property="og:url" content="https://docs.yomake.ai" />
+    <meta property="og:site_name" content="Yomake.ai" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Yomake Documentation" />
+    <meta name="twitter:description" content="Build applications lightning fast with AI-powered coding assistance." />
+    <meta name="twitter:image" content="https://yomake.ai/twitter-image.png" />
+    <meta name="twitter:site" content="@yomakeai" />
+
+    <!-- Brand Colors - Pale Ivory (#EEEBD9) & Smoke Signal (#282427) -->
+    <meta name="theme-color" content="#282427" />
+    <meta name="msapplication-TileColor" content="#282427" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Yomake Docs" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Yomake Documentation",
+      "description": "Complete documentation for Yomake.ai - AI-powered coding assistant for makers, entrepreneurs, and developers.",
+      "url": "https://docs.yomake.ai",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Yomake.ai",
+        "url": "https://yomake.ai"
+      }
+    }
+    </script>
+
+    <style>
+      /* Prevent FOUC - Brand colors */
+      html {
+        background-color: #EEEBD9; /* Pale Ivory */
+      }
+      html.dark {
+        background-color: #151314; /* Darker smoke */
+      }
+      /* Initial loading state */
+      body {
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+      }
+      body.loaded {
+        opacity: 1;
+      }
+    </style>
+    <script>
+      // Check for dark mode preference
+      (function() {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const stored = localStorage.getItem('theme');
+        if (stored === 'dark' || (!stored && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Remove loading state once content is ready
+      document.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.add('loaded');
+      });
+    </script>
+  </body>
+</html>
